@@ -100,7 +100,7 @@ namespace XPTable.Editors
 				uiPermission.Demand();
 				Control target = Control.FromChildHandle(m.HWnd);
 
-				return this.Client.ProcessMouseMessage(target, (WindowMessage) m.Msg, m.WParam.ToInt32(), m.LParam.ToInt32());
+				return this.Client.ProcessMouseMessage(target, (WindowMessage) m.Msg, m.WParam, m.LParam);
 			}
 				
 			return false;
